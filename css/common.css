@@ -11,8 +11,12 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
-}
 
+}
+li {
+  list-style: none;
+
+}
 input {
   padding: 8px;
   font: inherit;
@@ -21,4 +25,23 @@ input {
 button {
   padding: 8px 12px;
   cursor: pointer;
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  
+}
+.gallery li {
+  margin: 30px;
+}
+
+.gallery li:hover {
+  scale: 1.05;
+}
+
+.gallery img {
+  width: 400px;
+  height: 250px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 10px black;
 }
