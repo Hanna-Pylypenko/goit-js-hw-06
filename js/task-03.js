@@ -12,6 +12,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+// Method 1
 const gallery = document.querySelector('.gallery');
 
 const imageGalleryArray = images.forEach(image => {
@@ -26,4 +27,16 @@ const imageGalleryArray = images.forEach(image => {
 });
 
 console.log(gallery);
- 
+
+//  //Method 2
+// const gallery = document.querySelector('.gallery');
+// images.forEach(image => {
+//   gallery.insertAdjacentHTML('beforeend', '<li><img></img></li>');
+//   const imageAlt = image.alt;
+//   const imageScr = image.url;
+//   const imageTag = gallery.querySelector('img');
+//   imageTag.setAttribute('alt', imageAlt);
+//   imageTag.setAttribute('scr', imageScr);
+  
+// })
+// console.log(gallery);
