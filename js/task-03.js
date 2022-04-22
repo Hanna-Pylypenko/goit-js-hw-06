@@ -13,30 +13,26 @@ const images = [
   },
 ];
 // Method 1
-const gallery = document.querySelector('.gallery');
-
-const imageGalleryArray = images.forEach(image => {
-  const imageEl = document.createElement('img');
-  imageEl.src = image.url;
-  imageEl.alt = image.alt;
-  const imageItem = document.createElement('li');
-  imageItem.appendChild(imageEl);
-  //console.log(imageItem);
-  gallery.appendChild(imageItem);
-  
-});
-
-console.log(gallery);
-
-//  //Method 2
 // const gallery = document.querySelector('.gallery');
-// images.forEach(image => {
-//   gallery.insertAdjacentHTML('beforeend', '<li><img></img></li>');
-//   const imageAlt = image.alt;
-//   const imageScr = image.url;
-//   const imageTag = gallery.querySelector('img');
-//   imageTag.setAttribute('alt', imageAlt);
-//   imageTag.setAttribute('scr', imageScr);
+
+// const imageGalleryArray = images.forEach(image => {
+//   const imageEl = document.createElement('img');
+//   imageEl.src = image.url;
+//   imageEl.alt = image.alt;
+//   const imageItem = document.createElement('li');
+//   imageItem.appendChild(imageEl);
+//   //console.log(imageItem);
+//   gallery.appendChild(imageItem);
   
-// })
+// });
+
 // console.log(gallery);
+
+ //Mehtod 2
+
+const galleryRef = document.querySelector('.gallery');
+const addGalleryListEl = images.map(element => {
+  const addImage = `<li><img src="${element.url}" alt="${element.alt}" width=320 height=150></li>`;
+  return addImage;
+});
+galleryRef.insertAdjacentHTML('beforeend', addGalleryListEl.join(' '));
